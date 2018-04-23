@@ -1,0 +1,16 @@
+Task - 2 (Laplace Approximation)
+
+1. Compile the code using : mpicc -o laplace Laplace-Approximation.c
+
+2. Run the code as : time mpirun -n 1/2/4/8 ./laplace [options]
+
+-n = To Change Matrix Size
+-d = To change acceptance value ( 0.1 - 0.00001)
+-w = To change Laplace relaxation factor (0.1 - 1.0)
+-P = To change the matrix size
+-I = To change the initialization Type (fast or rand)
+-m = To change the maximum number in the matrix
+
+For example: mpirun -n 4 ./laplace -n 16 -d 0.0001 -I fast -P 1 -w 0.5
+
+Note: SIZE of matrix is assumed to be a multiple of number of nodes.
